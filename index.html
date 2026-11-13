@@ -9,6 +9,8 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,800&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&family=Vazirmatn:wght@400;600;800&display=swap">
 <style>
+@font-face{font-family:"Vazirmatn";src:url("assets/fonts/Vazirmatn.woff2") format("woff2");font-weight:100 900;font-display:swap;}
+
 /* Layout: dark-first single column. Hero with a live "embedding field" + orbiting photo → numbers → how a RAG answer is built (animated diagram)
    → four project case studies, each with its own visual → skill constellation → journey timeline → courses as bars → ask-my-portfolio → contact */
 :root {
@@ -311,7 +313,7 @@ footer { padding-block: 32px 44px; color: var(--muted); font-size: 13px; }
       <span class="status"><i></i><span data-t="status">Open to AI / LLM roles · Tehran</span></span>
       <h1><span data-t="hi">Hi, I'm</span><span data-t="sp"> </span><span class="grad" data-t="first">Houra.</span></h1>
       <p class="lede" data-t="lede" data-html></p>
-      <div class="cta">
+      <div class="cta"><a class="btn" href="Houra-Bahmani-Resume-FA.pdf" download data-t="resumeDownload">Download Persian résumé</a><a class="btn" href="Houra-Bahmani-Resume-Compact-FA.pdf" download data-t="compactDownload">Compact résumé</a>
         <a class="btn primary" href="#work" data-t="seeWork">See my work</a>
         <a class="btn ltr" href="https://github.com/h-bahmani" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.39 7.86 10.91.58.1.79-.25.79-.56v-2c-3.2.7-3.87-1.37-3.87-1.37-.52-1.33-1.28-1.69-1.28-1.69-1.04-.71.08-.7.08-.7 1.15.08 1.76 1.18 1.76 1.18 1.03 1.76 2.69 1.25 3.35.96.1-.75.4-1.25.73-1.54-2.55-.29-5.24-1.28-5.24-5.68 0-1.25.45-2.28 1.18-3.08-.12-.29-.51-1.46.11-3.04 0 0 .97-.31 3.17 1.18a11 11 0 0 1 5.77 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.58.23 2.75.11 3.04.74.8 1.18 1.83 1.18 3.08 0 4.41-2.69 5.38-5.25 5.67.41.36.78 1.06.78 2.14v3.17c0 .31.21.67.8.56A11.5 11.5 0 0 0 23.5 12C23.5 5.65 18.35.5 12 .5z"/></svg>GitHub</a>
         <a class="btn ltr" href="https://www.linkedin.com/in/houra-bahmani" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9.5h4V21H3zM9.5 9.5h3.8v1.6h.1c.5-1 1.8-2 3.8-2 4 0 4.8 2.6 4.8 6V21h-4v-5.1c0-1.2 0-2.8-1.7-2.8s-2 1.3-2 2.7V21h-4z"/></svg>LinkedIn</a>
@@ -466,6 +468,7 @@ footer { padding-block: 32px 44px; color: var(--muted); font-size: 13px; }
     </div>
   </section>
 
+<section class="s" id="experience"><div class="kicker" data-t="experienceK"></div><h2 data-t="experienceH"></h2><div class="deg" style="border-inline-start:3px solid var(--cyan);padding:24px;border-radius:16px;background:var(--surface)"><h3 data-t="workTitle"></h3><p data-t="workOrg"></p><p class="org" data-t="workDate"></p><ul><li data-t="workOCR"></li><li data-t="workMCP"></li></ul></div></section>
   <section class="s" id="journey">
     <div class="kicker" data-t="jK">Journey</div>
     <h2 data-t="jH">Five years, one direction.</h2>
@@ -478,7 +481,7 @@ footer { padding-block: 32px 44px; color: var(--muted); font-size: 13px; }
     <h2 data-t="lH">I keep learning on purpose.</h2>
     <div class="learn">
       <div class="deg">
-        <h3 data-t="degree">B.Sc. in Computer Engineering (Software)</h3>
+        <h3 data-t="masters"></h3><div class="org" data-t="mastersSchool"></div><div style="height:22px"></div><h3 data-t="degree">B.Sc. in Computer Engineering (Software)</h3>
         <div class="org" data-t="school">Islamic Azad University, Central Tehran Branch · 2022 – 2026</div>
         <div class="gpa"><b data-t="gpaV">18.77</b><span data-t="gpaL">GPA</span></div>
         <div class="lgs" id="lgs"></div>
@@ -517,9 +520,17 @@ footer { padding-block: 32px 44px; color: var(--muted); font-size: 13px; }
 <script>
 const T = {
   en: {
+    workOCR: "Developing national ID card recognition and identity-field extraction with OCR and an internal API.",
+    workMCP: "Developing MCP tools to connect language models to databases.",
+    masters: "M.Sc. in Medical Information Engineering",
+    mastersSchool: "University of Tehran · Aban 1405 (Oct–Nov 2026) – Present · In progress",
+    experienceK: "Experience", experienceH: "AI research & development", workTitle: "AI Research & Development (R&D)",
+    workOrg: "MobinNet · Part-time", workDate: "Mehr 1405 – Present",
+    resumeDownload: "Full Persian résumé", compactDownload: "Compact Persian résumé",
+
     brand: "Houra Bahmani", navWork: "Work", navSkills: "Skills", navJourney: "Journey", navContact: "Contact",
     status: "Open to AI / LLM roles · Tehran", hi: "Hi, I'm", first: "Houra.",
-    lede: "I build <b>LLM agents, RAG systems and computer-vision tools</b> in Python. Recent work includes a bilingual travel assistant backed by 139 tests and an app that redesigns real rooms with Stable Diffusion. I recently graduated in Computer Engineering and I'm looking for a team where I can contribute from day one and keep growing.", sp: " ",
+    lede: "I build <b>LLM agents, RAG systems and computer-vision tools</b> in Python. Recent work includes a bilingual travel assistant backed by 139 tests and an app that redesigns real rooms with Stable Diffusion. I hold a B.Sc. in Computer Engineering and started my M.Sc. in Medical Information Engineering at the University of Tehran in Aban 1405 (October–November 2026). Since Mehr 1405, I have been working part-time in AI R&amp;D at MobinNet on national ID card recognition, OCR and MCP tools for database access.", sp: " ",
     seeWork: "See my work",
     nums: [["139", "unit tests in one project"], ["20", "design styles in InteriorAI"], ["420", "catalog items wired in"], ["7", "months as an AI intern"], ["170", "hours of generative-AI bootcamp"]],
     howK: "How I build", howH: "An answer should come with its sources.",
@@ -545,7 +556,7 @@ const T = {
     more: 'More on <a href="https://github.com/h-bahmani" target="_blank" rel="noopener">GitHub</a>: <a href="https://github.com/h-bahmani/askrepo" target="_blank" rel="noopener">askrepo</a> (a codebase Q&A agent with line citations), <a href="https://github.com/h-bahmani/hse" target="_blank" rel="noopener">HSE assistant</a> (safety reports from workplace photos), and notebooks on deep learning and image processing.',
     skK: "Skills map", skH: "Tools and where I used them.", skP: "Select a skill to see the projects behind it.",
     usedP: "Used in:", jK: "Journey", jH: "Five years, one direction.", jP: "From my first Python course to building AI assistants.",
-    years: [["2022", ["Started B.Sc. in Computer Engineering", "First Python course (60 h)"]], ["2023", ["Advanced Python (45 h)", "Web Design 1 (58 h)"]], ["2024", ["SQL Server 2022 (60 h)", "First machine-learning projects"]], ["2025", ["AI internship at IMTMC", "First RAG and n8n projects"]], ["2026", ["Generative AI bootcamp (170 h)", "Graduated with GPA 18.77", "Safar Travel AI, InteriorAI, watermark removal"]]],
+    years: [["2022", ["Started B.Sc. in Computer Engineering", "First Python course (60 h)"]], ["2023", ["Advanced Python (45 h)", "Web Design 1 (58 h)"]], ["2024", ["SQL Server 2022 (60 h)", "First machine-learning projects"]], ["2025", ["AI internship at IMTMC", "First RAG and n8n projects"]], ["2026", ["Generative AI bootcamp (170 h)", "Graduated with GPA 18.77", "Safar Travel AI, InteriorAI, watermark removal", "Part-time AI R&D at MobinNet · Mehr 1405 – Present", "Started M.Sc. in Medical Information Engineering · University of Tehran · Aban 1405"]]],
     lK: "Education & courses", lH: "Always learning.", degree: "B.Sc. in Computer Engineering (Software)",
     school: "Islamic Azad University, Central Tehran Branch · 2022 – 2026", gpaV: "18.77", gpaL: "GPA",
     langs: [["English", "Advanced", 80], ["French", "Upper-intermediate", 62], ["Persian", "Native", 100]], h: "h",
@@ -556,9 +567,17 @@ const T = {
     copy: "Copy email", copied: "Email copied.", copyFail: "Copy is blocked here. Select the address and copy it.", foot: "© 2026 Houra Bahmani Qajar", alt: "Portrait of Houra Bahmani Qajar"
   },
   fa: {
+    workOCR: "توسعهٔ تشخیص کارت ملی و استخراج اطلاعات هویتی با OCR و API داخلی.",
+    workMCP: "توسعهٔ ابزارهای MCP برای اتصال مدل‌های زبانی به پایگاه‌های داده.",
+    masters: "کارشناسی ارشد مهندسی اطلاعات پزشکی",
+    mastersSchool: "دانشگاه تهران · آبان ۱۴۰۵ تا کنون · در حال تحصیل",
+    experienceK: "سوابق کاری", experienceH: "تحقیق و توسعه در هوش مصنوعی", workTitle: "تحقیق و توسعه (R&D) در حوزهٔ هوش مصنوعی",
+    workOrg: "شرکت مبین‌نت · پاره‌وقت", workDate: "مهر ۱۴۰۵ تا کنون",
+    resumeDownload: "رزومهٔ کامل", compactDownload: "رزومهٔ کوتاه",
+
     brand: "حورا بهمنی", navWork: "کارها", navSkills: "مهارت‌ها", navJourney: "مسیر", navContact: "تماس",
     status: "آماده همکاری در نقش‌های AI و LLM · تهران", hi: "", sp: "", first: "حورا بهمنی قاجار",
-    lede: "مهندس هوش مصنوعی هستم و با Python <b>ایجنت‌های LLM، سیستم‌های RAG و ابزارهای بینایی ماشین</b> می‌سازم. از کارهای اخیرم یک دستیار دوزبانه سفر با ۱۳۹ تست خودکار و اپلیکیشنی است که با Stable Diffusion دکوراسیون اتاق‌های واقعی را بازطراحی می‌کند. به‌تازگی کارشناسی مهندسی کامپیوتر را به پایان رسانده‌ام و دنبال تیمی هستم که از روز اول در آن سهم واقعی داشته باشم و رشد کنم.",
+    lede: "مهندس هوش مصنوعی هستم و با Python <b>ایجنت‌های LLM، سیستم‌های RAG و ابزارهای بینایی ماشین</b> می‌سازم. از کارهای اخیرم یک دستیار دوزبانه سفر با ۱۳۹ تست خودکار و اپلیکیشنی است که با Stable Diffusion دکوراسیون اتاق‌های واقعی را بازطراحی می‌کند. دانش‌آموختهٔ مهندسی کامپیوتر و از آبان ۱۴۰۵ دانشجوی کارشناسی ارشد مهندسی اطلاعات پزشکی دانشگاه تهران هستم. از مهر ۱۴۰۵ در شرکت مبین‌نت به‌صورت پاره‌وقت در تحقیق و توسعهٔ هوش مصنوعی فعالیت می‌کنم؛ با تمرکز بر تشخیص کارت ملی، OCR و ابزارهای MCP برای پایگاه‌های داده.",
     seeWork: "دیدن کارهایم",
     nums: [["۱۳۹", "تست واحد در یک پروژه"], ["۲۰", "سبک طراحی در InteriorAI"], ["۴۲۰", "قطعه در کاتالوگ"], ["۷", "ماه کارآموزی هوش مصنوعی"], ["۱۷۰", "ساعت بوت‌کمپ هوش مصنوعی مولد"]],
     howK: "روش کار من", howH: "هر پاسخ باید با منبعش همراه باشد.",
@@ -584,7 +603,7 @@ const T = {
     more: 'کارهای بیشتر در <a href="https://github.com/h-bahmani" target="_blank" rel="noopener">گیت‌هاب</a>: <a href="https://github.com/h-bahmani/askrepo" target="_blank" rel="noopener">askrepo</a> (ایجنت پرسش‌وپاسخ روی کد با ارجاع به خط)، <a href="https://github.com/h-bahmani/hse" target="_blank" rel="noopener">دستیار HSE</a> (گزارش ایمنی از عکس محیط کار) و نوت‌بوک‌های یادگیری عمیق و پردازش تصویر.',
     skK: "نقشه مهارت‌ها", skH: "ابزارها و پروژه‌هایی که در آن‌ها به کار رفته‌اند", skP: "روی هر مهارت کلیک کنید تا پروژه‌های مرتبط با آن را ببینید.",
     usedP: "استفاده‌شده در:", jK: "مسیر", jH: "مسیر پنج‌ساله", jP: "از نخستین دوره پایتون تا ساخت دستیارهای هوش مصنوعی.",
-    years: [["۱۴۰۱", ["آغاز کارشناسی مهندسی کامپیوتر", "نخستین دوره پایتون (۶۰ ساعت)"]], ["۱۴۰۲", ["پایتون پیشرفته (۴۵ ساعت)", "طراحی وب ۱ (۵۸ ساعت)"]], ["۱۴۰۳", ["SQL Server 2022 (۶۰ ساعت)", "نخستین پروژه‌های یادگیری ماشین"]], ["۱۴۰۴", ["کارآموزی هوش مصنوعی در IMTMC", "نخستین پروژه‌های RAG و n8n"]], ["۱۴۰۵", ["بوت‌کمپ هوش مصنوعی مولد (۱۷۰ ساعت)", "فارغ‌التحصیلی با معدل ۱۸٫۷۷", "ساخت دستیار سفر، اپلیکیشن InteriorAI و سامانه حذف واترمارک"]]],
+    years: [["۱۴۰۱", ["آغاز کارشناسی مهندسی کامپیوتر", "نخستین دوره پایتون (۶۰ ساعت)"]], ["۱۴۰۲", ["پایتون پیشرفته (۴۵ ساعت)", "طراحی وب ۱ (۵۸ ساعت)"]], ["۱۴۰۳", ["SQL Server 2022 (۶۰ ساعت)", "نخستین پروژه‌های یادگیری ماشین"]], ["۱۴۰۴", ["کارآموزی هوش مصنوعی در IMTMC", "نخستین پروژه‌های RAG و n8n"]], ["۱۴۰۵", ["بوت‌کمپ هوش مصنوعی مولد (۱۷۰ ساعت)", "فارغ‌التحصیلی با معدل ۱۸٫۷۷", "ساخت دستیار سفر، اپلیکیشن InteriorAI و سامانه حذف واترمارک", "تحقیق و توسعهٔ هوش مصنوعی در مبین‌نت · پاره‌وقت · مهر ۱۴۰۵ تا کنون", "آغاز ارشد مهندسی اطلاعات پزشکی دانشگاه تهران · آبان ۱۴۰۵"]]],
     lK: "تحصیلات و دوره‌ها", lH: "یادگیری مداوم", degree: "کارشناسی مهندسی کامپیوتر — نرم‌افزار",
     school: "دانشگاه آزاد اسلامی واحد تهران مرکزی · ۱۴۰۱ – ۱۴۰۵", gpaV: "۱۸٫۷۷", gpaL: "معدل",
     langs: [["انگلیسی", "پیشرفته", 80], ["فرانسه", "بالاتر از متوسط", 62], ["فارسی", "زبان مادری", 100]], h: "ساعت",
@@ -623,7 +642,7 @@ const ORBIT = ["RAG", "YOLOv8", "n8n", "PyTorch", "LLM Agents", "SDXL"];
 const fd = (s) => String(s).replace(/\d/g, (d) => "۰۱۲۳۴۵۶۷۸۹"[d]);
 const esc = (s) => String(s).replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
 const css = (v) => getComputedStyle(document.documentElement).getPropertyValue(v).trim();
-let lang = "en", activeSkill = "RAG";
+let lang = "fa", activeSkill = "RAG";
 
 function render() {
   const t = T[lang];
@@ -712,7 +731,8 @@ function corpus() {
     { title: "InteriorAI", id: "p-interior", text: [t.s3P, ...t.s3, "generative ai stable diffusion sdxl controlnet computer vision yolov8 sam lama gpu flask design"].join(" "), snip: t.s3P },
     { title: t.s4H, id: "p-wm", text: [t.s4P, ...t.s4, "computer vision detection inpainting evaluation pytorch opencv gradio yolov8 testing"].join(" "), snip: t.s4P },
     { title: PROJ.intern[lang], id: "journey", text: [t.years[3][1].join(" "), "selenium test testing automation n8n workflow rag internship imtmc"].join(" "), snip: t.years[3][1].join(" · ") },
-    { title: t.lK, id: "learning", text: [t.degree, t.school, ...COURSES.map((c) => c[lang] + " " + c.en), "gpa course machine learning python sql web generative"].join(" "), snip: t.degree }
+    { title: t.lK, id: "learning", text: [t.masters, t.mastersSchool, t.degree, t.school, ...COURSES.map((c) => c[lang] + " " + c.en), "gpa course machine learning python sql web generative"].join(" "), snip: t.masters + " · " + t.mastersSchool },
+    { title: t.workTitle, id: "experience", text: [t.workTitle, t.workOrg, t.workDate, t.workOCR, t.workMCP, "mobinnet mobin net part time research development ai R&D مبین نت پاره وقت تحقیق توسعه هوش مصنوعی"].join(" "), snip: t.workOrg + " · " + t.workDate + " · " + t.workOCR + " " + t.workMCP }
   ];
   return D.map((d) => ({ ...d, tk: toks(d.text) }));
 }
