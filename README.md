@@ -4,12 +4,12 @@ Bilingual Persian/English portfolio for AI engineering, LLM agents, RAG and comp
 
 - Updated experience: part-time AI R&D at MobinNet, Mehr 1405–present; national ID recognition, OCR and MCP database tools.
 - Education: M.Sc. in Medical Information Engineering, University of Tehran, Aban 1405–present.
-- Downloadable Persian résumés: original-template and compact editions.
+- Downloadable Persian résumé using the original supplied template.
 - Responsive layout, project demonstrations, skills map and browser-local portfolio search.
 
 ## Local preview
 
-Open `index.html` directly, or run `OPEN-WEBSITE.cmd` on Windows.
+Open `index.html` directly.
 
 Alternatively:
 
@@ -23,4 +23,4 @@ Then open http://127.0.0.1:8766.
 
 Static GitHub Pages site: https://h-bahmani.github.io/ . No build step is required.
 
-Persian font: Vazirmatn, distributed under the included SIL Open Font License.
+Typography, layout and language behavior follow the original portfolio version.
