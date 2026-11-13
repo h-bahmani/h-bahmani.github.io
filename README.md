@@ -2,7 +2,7 @@
 
 Bilingual Persian/English portfolio for AI engineering, LLM agents, RAG and computer vision.
 
-- Updated experience: part-time AI R&D at MobinNet, Mehr 1405–present; national ID recognition, OCR and MCP database tools.
+- Updated experience: part-time Software Specialist at MobinNet, Mehr 1405–present; national ID recognition, OCR and MCP database tools.
 - Education: M.Sc. in Medical Information Engineering, University of Tehran, Aban 1405–present.
 - Responsive layout, project demonstrations, skills map and browser-local portfolio search.
 
